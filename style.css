@@ -1,0 +1,72 @@
+*, *:is(::after, ::before) {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: 1rem "Veranda", sans-serif;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+body .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 320px;
+  height: 400px;
+  background-color: #444;
+  border-radius: 20px;
+  filter: grayscale(1);
+  background-size: 41px 41px;
+  transition: all 0.3s;
+  animation: animate-bg 0.7s linear infinite;
+  animation-play-state: paused;
+}
+body .box:hover {
+  animation-play-state: running;
+}
+body .box:hover img {
+  height: 110%;
+}
+body .box img {
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  transition: all 0.3s;
+}
+@keyframes animate-bg {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 41px;
+  }
+}
+body .box1 {
+  background-image: linear-gradient(45deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
+  transition: all 0.3s;
+}
+body .box1:hover {
+  filter: none;
+}
+body .box2 {
+  background-image: linear-gradient(135deg, #ff61ae 25%, #444 25%, #444 50%, #ff61ae 50%, #ff61ae 75%, #444 75%, #444 100%);
+  transition: all 0.3s;
+}
+body .box2:hover {
+  filter: none;
+}
+
+/*# sourceMappingURL=style.css.map */
